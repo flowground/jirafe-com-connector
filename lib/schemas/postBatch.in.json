@@ -1,0 +1,1333 @@
+{
+    "type": "object",
+    "properties": {
+        "siteId": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "cart": {
+                    "items": {
+                        "properties": {
+                            "cart_id": {
+                                "type": "string"
+                            },
+                            "change_date": {
+                                "format": "date-time",
+                                "type": "string"
+                            },
+                            "cookies": {
+                                "type": "object"
+                            },
+                            "create_date": {
+                                "format": "date-time",
+                                "type": "string"
+                            },
+                            "currency": {
+                                "type": "string"
+                            },
+                            "customer": {
+                                "properties": {
+                                    "active_flag": {
+                                        "default": true,
+                                        "type": "boolean"
+                                    },
+                                    "change_date": {
+                                        "format": "date-time",
+                                        "type": "string"
+                                    },
+                                    "company": {
+                                        "type": "string"
+                                    },
+                                    "cookies": {
+                                        "type": "object"
+                                    },
+                                    "create_date": {
+                                        "format": "date-time",
+                                        "type": "string"
+                                    },
+                                    "department": {
+                                        "type": "string"
+                                    },
+                                    "email": {
+                                        "type": "string"
+                                    },
+                                    "first_name": {
+                                        "type": "string"
+                                    },
+                                    "id": {
+                                        "type": "string"
+                                    },
+                                    "last_name": {
+                                        "type": "string"
+                                    },
+                                    "marketing_opt_in": {
+                                        "type": "boolean"
+                                    },
+                                    "name": {
+                                        "type": "string"
+                                    },
+                                    "phone": {
+                                        "type": "string"
+                                    },
+                                    "position": {
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "id",
+                                    "create_date",
+                                    "change_date"
+                                ],
+                                "type": "object"
+                            },
+                            "id": {
+                                "type": "string"
+                            },
+                            "items": {
+                                "items": {
+                                    "properties": {
+                                        "cart_item_number": {
+                                            "type": "string"
+                                        },
+                                        "change_date": {
+                                            "format": "date-time",
+                                            "type": "string"
+                                        },
+                                        "create_date": {
+                                            "format": "date-time",
+                                            "type": "string"
+                                        },
+                                        "discount_price": {
+                                            "maximum": 9007199254740992,
+                                            "minimum": 0,
+                                            "type": "number"
+                                        },
+                                        "id": {
+                                            "type": "string"
+                                        },
+                                        "price": {
+                                            "maximum": 9007199254740992,
+                                            "minimum": 0,
+                                            "type": "number"
+                                        },
+                                        "product": {
+                                            "properties": {
+                                                "ancestors": {
+                                                    "items": {
+                                                        "type": "string"
+                                                    },
+                                                    "type": "array"
+                                                },
+                                                "attributes": {
+                                                    "items": {
+                                                        "properties": {
+                                                            "id": {
+                                                                "type": "string"
+                                                            },
+                                                            "name": {
+                                                                "type": "string"
+                                                            },
+                                                            "value": {
+                                                                "type": "string"
+                                                            }
+                                                        },
+                                                        "required": [
+                                                            "id",
+                                                            "name",
+                                                            "value"
+                                                        ],
+                                                        "type": "object"
+                                                    },
+                                                    "type": "array",
+                                                    "uniqueItems": true
+                                                },
+                                                "base_product": {
+                                                    "properties": {
+                                                        "code": {
+                                                            "type": "string"
+                                                        },
+                                                        "id": {
+                                                            "type": "string"
+                                                        },
+                                                        "name": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "type": "object"
+                                                },
+                                                "brand": {
+                                                    "type": "string"
+                                                },
+                                                "catalog": {
+                                                    "properties": {
+                                                        "id": {
+                                                            "type": "string"
+                                                        },
+                                                        "name": {
+                                                            "type": "string"
+                                                        },
+                                                        "version_id": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "id"
+                                                    ],
+                                                    "type": "object"
+                                                },
+                                                "categories": {
+                                                    "items": {
+                                                        "properties": {
+                                                            "id": {
+                                                                "type": "string"
+                                                            },
+                                                            "name": {
+                                                                "type": "string"
+                                                            }
+                                                        },
+                                                        "required": [
+                                                            "id",
+                                                            "name"
+                                                        ],
+                                                        "type": "object"
+                                                    },
+                                                    "type": "array",
+                                                    "uniqueItems": true
+                                                },
+                                                "change_date": {
+                                                    "format": "date-time",
+                                                    "type": "string"
+                                                },
+                                                "code": {
+                                                    "type": "string"
+                                                },
+                                                "create_date": {
+                                                    "format": "date-time",
+                                                    "type": "string"
+                                                },
+                                                "id": {
+                                                    "type": "string"
+                                                },
+                                                "images": {
+                                                    "items": {},
+                                                    "type": "array"
+                                                },
+                                                "is_order": {
+                                                    "type": "boolean"
+                                                },
+                                                "is_sku": {
+                                                    "type": "boolean"
+                                                },
+                                                "name": {
+                                                    "type": "string"
+                                                },
+                                                "rating": {
+                                                    "type": "number"
+                                                },
+                                                "urls": {
+                                                    "properties": {
+                                                        "admin": {
+                                                            "format": "uri",
+                                                            "type": "string"
+                                                        },
+                                                        "store": {
+                                                            "format": "uri",
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "type": "object"
+                                                },
+                                                "vendors": {
+                                                    "items": {
+                                                        "properties": {
+                                                            "id": {
+                                                                "type": "string"
+                                                            },
+                                                            "name": {
+                                                                "type": "string"
+                                                            }
+                                                        },
+                                                        "type": "object"
+                                                    },
+                                                    "type": "array"
+                                                }
+                                            },
+                                            "required": [
+                                                "id",
+                                                "is_order",
+                                                "is_sku",
+                                                "code",
+                                                "create_date",
+                                                "change_date"
+                                            ],
+                                            "type": "object"
+                                        },
+                                        "quantity": {
+                                            "maximum": 9007199254740992,
+                                            "minimum": -9007199254740992,
+                                            "type": "integer"
+                                        }
+                                    },
+                                    "required": [
+                                        "id",
+                                        "create_date",
+                                        "change_date",
+                                        "cart_item_number",
+                                        "quantity",
+                                        "price",
+                                        "discount_price",
+                                        "product"
+                                    ],
+                                    "type": "object"
+                                },
+                                "type": "array"
+                            },
+                            "previous_items": {
+                                "items": {
+                                    "properties": {
+                                        "cart_item_number": {
+                                            "type": "string"
+                                        },
+                                        "change_date": {
+                                            "format": "date-time",
+                                            "type": "string"
+                                        },
+                                        "create_date": {
+                                            "format": "date-time",
+                                            "type": "string"
+                                        },
+                                        "discount_price": {
+                                            "maximum": 9007199254740992,
+                                            "minimum": 0,
+                                            "type": "number"
+                                        },
+                                        "id": {
+                                            "type": "string"
+                                        },
+                                        "price": {
+                                            "maximum": 9007199254740992,
+                                            "minimum": 0,
+                                            "type": "number"
+                                        },
+                                        "product": {
+                                            "properties": {
+                                                "ancestors": {
+                                                    "items": {
+                                                        "type": "string"
+                                                    },
+                                                    "type": "array"
+                                                },
+                                                "attributes": {
+                                                    "items": {
+                                                        "properties": {
+                                                            "id": {
+                                                                "type": "string"
+                                                            },
+                                                            "name": {
+                                                                "type": "string"
+                                                            },
+                                                            "value": {
+                                                                "type": "string"
+                                                            }
+                                                        },
+                                                        "required": [
+                                                            "id",
+                                                            "name",
+                                                            "value"
+                                                        ],
+                                                        "type": "object"
+                                                    },
+                                                    "type": "array",
+                                                    "uniqueItems": true
+                                                },
+                                                "base_product": {
+                                                    "properties": {
+                                                        "code": {
+                                                            "type": "string"
+                                                        },
+                                                        "id": {
+                                                            "type": "string"
+                                                        },
+                                                        "name": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "type": "object"
+                                                },
+                                                "brand": {
+                                                    "type": "string"
+                                                },
+                                                "catalog": {
+                                                    "properties": {
+                                                        "id": {
+                                                            "type": "string"
+                                                        },
+                                                        "name": {
+                                                            "type": "string"
+                                                        },
+                                                        "version_id": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "id"
+                                                    ],
+                                                    "type": "object"
+                                                },
+                                                "categories": {
+                                                    "items": {
+                                                        "properties": {
+                                                            "id": {
+                                                                "type": "string"
+                                                            },
+                                                            "name": {
+                                                                "type": "string"
+                                                            }
+                                                        },
+                                                        "required": [
+                                                            "id",
+                                                            "name"
+                                                        ],
+                                                        "type": "object"
+                                                    },
+                                                    "type": "array",
+                                                    "uniqueItems": true
+                                                },
+                                                "change_date": {
+                                                    "format": "date-time",
+                                                    "type": "string"
+                                                },
+                                                "code": {
+                                                    "type": "string"
+                                                },
+                                                "create_date": {
+                                                    "format": "date-time",
+                                                    "type": "string"
+                                                },
+                                                "id": {
+                                                    "type": "string"
+                                                },
+                                                "images": {
+                                                    "items": {},
+                                                    "type": "array"
+                                                },
+                                                "is_order": {
+                                                    "type": "boolean"
+                                                },
+                                                "is_sku": {
+                                                    "type": "boolean"
+                                                },
+                                                "name": {
+                                                    "type": "string"
+                                                },
+                                                "rating": {
+                                                    "type": "number"
+                                                },
+                                                "urls": {
+                                                    "properties": {
+                                                        "admin": {
+                                                            "format": "uri",
+                                                            "type": "string"
+                                                        },
+                                                        "store": {
+                                                            "format": "uri",
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "type": "object"
+                                                },
+                                                "vendors": {
+                                                    "items": {
+                                                        "properties": {
+                                                            "id": {
+                                                                "type": "string"
+                                                            },
+                                                            "name": {
+                                                                "type": "string"
+                                                            }
+                                                        },
+                                                        "type": "object"
+                                                    },
+                                                    "type": "array"
+                                                }
+                                            },
+                                            "required": [
+                                                "id",
+                                                "is_order",
+                                                "is_sku",
+                                                "code",
+                                                "create_date",
+                                                "change_date"
+                                            ],
+                                            "type": "object"
+                                        },
+                                        "quantity": {
+                                            "maximum": 9007199254740992,
+                                            "minimum": -9007199254740992,
+                                            "type": "integer"
+                                        }
+                                    },
+                                    "required": [
+                                        "id",
+                                        "create_date",
+                                        "change_date",
+                                        "cart_item_number",
+                                        "quantity",
+                                        "price",
+                                        "discount_price",
+                                        "product"
+                                    ],
+                                    "type": "object"
+                                },
+                                "type": "array"
+                            },
+                            "subtotal": {
+                                "type": "number"
+                            },
+                            "total": {
+                                "maximum": 9007199254740992,
+                                "minimum": 0,
+                                "type": "number"
+                            },
+                            "total_discounts": {
+                                "maximum": 9007199254740992,
+                                "minimum": 0,
+                                "type": "number"
+                            },
+                            "total_payment_cost": {
+                                "maximum": 9007199254740992,
+                                "minimum": 0,
+                                "type": "number"
+                            },
+                            "total_shipping": {
+                                "maximum": 9007199254740992,
+                                "minimum": 0,
+                                "type": "number"
+                            },
+                            "total_tax": {
+                                "maximum": 9007199254740992,
+                                "minimum": 0,
+                                "type": "number"
+                            },
+                            "visit": {
+                                "properties": {
+                                    "last_pageview_id": {
+                                        "type": "string"
+                                    },
+                                    "pageview_id": {
+                                        "type": "string"
+                                    },
+                                    "visit_id": {
+                                        "type": "string"
+                                    },
+                                    "visitor_id": {
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "visit_id",
+                                    "visitor_id",
+                                    "pageview_id",
+                                    "last_pageview_id"
+                                ],
+                                "type": "object"
+                            }
+                        },
+                        "required": [
+                            "id",
+                            "create_date",
+                            "change_date",
+                            "subtotal",
+                            "total",
+                            "total_tax",
+                            "total_shipping",
+                            "total_payment_cost",
+                            "total_discounts",
+                            "currency",
+                            "customer",
+                            "items"
+                        ],
+                        "type": "object"
+                    },
+                    "type": "array"
+                },
+                "category": {
+                    "items": {
+                        "properties": {
+                            "id": {
+                                "type": "string"
+                            },
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "id",
+                            "name"
+                        ],
+                        "type": "object"
+                    },
+                    "type": "array"
+                },
+                "customer": {
+                    "items": {
+                        "properties": {
+                            "active_flag": {
+                                "default": true,
+                                "type": "boolean"
+                            },
+                            "change_date": {
+                                "format": "date-time",
+                                "type": "string"
+                            },
+                            "company": {
+                                "type": "string"
+                            },
+                            "cookies": {
+                                "type": "object"
+                            },
+                            "create_date": {
+                                "format": "date-time",
+                                "type": "string"
+                            },
+                            "department": {
+                                "type": "string"
+                            },
+                            "email": {
+                                "type": "string"
+                            },
+                            "first_name": {
+                                "type": "string"
+                            },
+                            "id": {
+                                "type": "string"
+                            },
+                            "last_name": {
+                                "type": "string"
+                            },
+                            "marketing_opt_in": {
+                                "type": "boolean"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "phone": {
+                                "type": "string"
+                            },
+                            "position": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "id",
+                            "create_date",
+                            "change_date"
+                        ],
+                        "type": "object"
+                    },
+                    "type": "array"
+                },
+                "employee": {
+                    "items": {},
+                    "type": "array"
+                },
+                "order": {
+                    "items": {
+                        "properties": {
+                            "cart_id": {
+                                "type": "string"
+                            },
+                            "change_date": {
+                                "format": "date-time",
+                                "type": "string"
+                            },
+                            "create_date": {
+                                "format": "date-time",
+                                "type": "string"
+                            },
+                            "currency": {
+                                "type": "string"
+                            },
+                            "customer": {
+                                "properties": {
+                                    "active_flag": {
+                                        "default": true,
+                                        "type": "boolean"
+                                    },
+                                    "change_date": {
+                                        "format": "date-time",
+                                        "type": "string"
+                                    },
+                                    "company": {
+                                        "type": "string"
+                                    },
+                                    "cookies": {
+                                        "type": "object"
+                                    },
+                                    "create_date": {
+                                        "format": "date-time",
+                                        "type": "string"
+                                    },
+                                    "department": {
+                                        "type": "string"
+                                    },
+                                    "email": {
+                                        "type": "string"
+                                    },
+                                    "first_name": {
+                                        "type": "string"
+                                    },
+                                    "id": {
+                                        "type": "string"
+                                    },
+                                    "last_name": {
+                                        "type": "string"
+                                    },
+                                    "marketing_opt_in": {
+                                        "type": "boolean"
+                                    },
+                                    "name": {
+                                        "type": "string"
+                                    },
+                                    "phone": {
+                                        "type": "string"
+                                    },
+                                    "position": {
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "id",
+                                    "create_date",
+                                    "change_date"
+                                ],
+                                "type": "object"
+                            },
+                            "items": {
+                                "items": {
+                                    "properties": {
+                                        "change_date": {
+                                            "format": "date-time",
+                                            "type": "string"
+                                        },
+                                        "create_date": {
+                                            "format": "date-time",
+                                            "type": "string"
+                                        },
+                                        "discount_price": {
+                                            "maximum": 9007199254740992,
+                                            "minimum": 0,
+                                            "type": "number"
+                                        },
+                                        "id": {
+                                            "type": "string"
+                                        },
+                                        "order_item_number": {
+                                            "type": "string"
+                                        },
+                                        "price": {
+                                            "maximum": 9007199254740992,
+                                            "minimum": 0,
+                                            "type": "number"
+                                        },
+                                        "product": {
+                                            "properties": {
+                                                "ancestors": {
+                                                    "items": {
+                                                        "type": "string"
+                                                    },
+                                                    "type": "array"
+                                                },
+                                                "attributes": {
+                                                    "items": {
+                                                        "properties": {
+                                                            "id": {
+                                                                "type": "string"
+                                                            },
+                                                            "name": {
+                                                                "type": "string"
+                                                            },
+                                                            "value": {
+                                                                "type": "string"
+                                                            }
+                                                        },
+                                                        "required": [
+                                                            "id",
+                                                            "name",
+                                                            "value"
+                                                        ],
+                                                        "type": "object"
+                                                    },
+                                                    "type": "array",
+                                                    "uniqueItems": true
+                                                },
+                                                "base_product": {
+                                                    "properties": {
+                                                        "code": {
+                                                            "type": "string"
+                                                        },
+                                                        "id": {
+                                                            "type": "string"
+                                                        },
+                                                        "name": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "type": "object"
+                                                },
+                                                "brand": {
+                                                    "type": "string"
+                                                },
+                                                "catalog": {
+                                                    "properties": {
+                                                        "id": {
+                                                            "type": "string"
+                                                        },
+                                                        "name": {
+                                                            "type": "string"
+                                                        },
+                                                        "version_id": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "id"
+                                                    ],
+                                                    "type": "object"
+                                                },
+                                                "categories": {
+                                                    "items": {
+                                                        "properties": {
+                                                            "id": {
+                                                                "type": "string"
+                                                            },
+                                                            "name": {
+                                                                "type": "string"
+                                                            }
+                                                        },
+                                                        "required": [
+                                                            "id",
+                                                            "name"
+                                                        ],
+                                                        "type": "object"
+                                                    },
+                                                    "type": "array",
+                                                    "uniqueItems": true
+                                                },
+                                                "change_date": {
+                                                    "format": "date-time",
+                                                    "type": "string"
+                                                },
+                                                "code": {
+                                                    "type": "string"
+                                                },
+                                                "create_date": {
+                                                    "format": "date-time",
+                                                    "type": "string"
+                                                },
+                                                "id": {
+                                                    "type": "string"
+                                                },
+                                                "images": {
+                                                    "items": {},
+                                                    "type": "array"
+                                                },
+                                                "is_order": {
+                                                    "type": "boolean"
+                                                },
+                                                "is_sku": {
+                                                    "type": "boolean"
+                                                },
+                                                "name": {
+                                                    "type": "string"
+                                                },
+                                                "rating": {
+                                                    "type": "number"
+                                                },
+                                                "urls": {
+                                                    "properties": {
+                                                        "admin": {
+                                                            "format": "uri",
+                                                            "type": "string"
+                                                        },
+                                                        "store": {
+                                                            "format": "uri",
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "type": "object"
+                                                },
+                                                "vendors": {
+                                                    "items": {
+                                                        "properties": {
+                                                            "id": {
+                                                                "type": "string"
+                                                            },
+                                                            "name": {
+                                                                "type": "string"
+                                                            }
+                                                        },
+                                                        "type": "object"
+                                                    },
+                                                    "type": "array"
+                                                }
+                                            },
+                                            "required": [
+                                                "id",
+                                                "is_order",
+                                                "is_sku",
+                                                "code",
+                                                "create_date",
+                                                "change_date"
+                                            ],
+                                            "type": "object"
+                                        },
+                                        "quantity": {
+                                            "maximum": 9007199254740992,
+                                            "minimum": -9007199254740992,
+                                            "type": "integer"
+                                        },
+                                        "status": {
+                                            "enum": [
+                                                "accepted",
+                                                "cancelled"
+                                            ]
+                                        }
+                                    },
+                                    "required": [
+                                        "id",
+                                        "create_date",
+                                        "change_date",
+                                        "order_item_number",
+                                        "quantity",
+                                        "status",
+                                        "price",
+                                        "discount_price",
+                                        "product"
+                                    ],
+                                    "type": "object"
+                                },
+                                "minimum": 1,
+                                "type": "array"
+                            },
+                            "order_date": {
+                                "format": "date-time",
+                                "type": "string"
+                            },
+                            "order_number": {
+                                "type": "string"
+                            },
+                            "previous_items": {
+                                "items": {
+                                    "properties": {
+                                        "change_date": {
+                                            "format": "date-time",
+                                            "type": "string"
+                                        },
+                                        "create_date": {
+                                            "format": "date-time",
+                                            "type": "string"
+                                        },
+                                        "discount_price": {
+                                            "maximum": 9007199254740992,
+                                            "minimum": 0,
+                                            "type": "number"
+                                        },
+                                        "id": {
+                                            "type": "string"
+                                        },
+                                        "order_item_number": {
+                                            "type": "string"
+                                        },
+                                        "price": {
+                                            "maximum": 9007199254740992,
+                                            "minimum": 0,
+                                            "type": "number"
+                                        },
+                                        "product": {
+                                            "properties": {
+                                                "ancestors": {
+                                                    "items": {
+                                                        "type": "string"
+                                                    },
+                                                    "type": "array"
+                                                },
+                                                "attributes": {
+                                                    "items": {
+                                                        "properties": {
+                                                            "id": {
+                                                                "type": "string"
+                                                            },
+                                                            "name": {
+                                                                "type": "string"
+                                                            },
+                                                            "value": {
+                                                                "type": "string"
+                                                            }
+                                                        },
+                                                        "required": [
+                                                            "id",
+                                                            "name",
+                                                            "value"
+                                                        ],
+                                                        "type": "object"
+                                                    },
+                                                    "type": "array",
+                                                    "uniqueItems": true
+                                                },
+                                                "base_product": {
+                                                    "properties": {
+                                                        "code": {
+                                                            "type": "string"
+                                                        },
+                                                        "id": {
+                                                            "type": "string"
+                                                        },
+                                                        "name": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "type": "object"
+                                                },
+                                                "brand": {
+                                                    "type": "string"
+                                                },
+                                                "catalog": {
+                                                    "properties": {
+                                                        "id": {
+                                                            "type": "string"
+                                                        },
+                                                        "name": {
+                                                            "type": "string"
+                                                        },
+                                                        "version_id": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "id"
+                                                    ],
+                                                    "type": "object"
+                                                },
+                                                "categories": {
+                                                    "items": {
+                                                        "properties": {
+                                                            "id": {
+                                                                "type": "string"
+                                                            },
+                                                            "name": {
+                                                                "type": "string"
+                                                            }
+                                                        },
+                                                        "required": [
+                                                            "id",
+                                                            "name"
+                                                        ],
+                                                        "type": "object"
+                                                    },
+                                                    "type": "array",
+                                                    "uniqueItems": true
+                                                },
+                                                "change_date": {
+                                                    "format": "date-time",
+                                                    "type": "string"
+                                                },
+                                                "code": {
+                                                    "type": "string"
+                                                },
+                                                "create_date": {
+                                                    "format": "date-time",
+                                                    "type": "string"
+                                                },
+                                                "id": {
+                                                    "type": "string"
+                                                },
+                                                "images": {
+                                                    "items": {},
+                                                    "type": "array"
+                                                },
+                                                "is_order": {
+                                                    "type": "boolean"
+                                                },
+                                                "is_sku": {
+                                                    "type": "boolean"
+                                                },
+                                                "name": {
+                                                    "type": "string"
+                                                },
+                                                "rating": {
+                                                    "type": "number"
+                                                },
+                                                "urls": {
+                                                    "properties": {
+                                                        "admin": {
+                                                            "format": "uri",
+                                                            "type": "string"
+                                                        },
+                                                        "store": {
+                                                            "format": "uri",
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "type": "object"
+                                                },
+                                                "vendors": {
+                                                    "items": {
+                                                        "properties": {
+                                                            "id": {
+                                                                "type": "string"
+                                                            },
+                                                            "name": {
+                                                                "type": "string"
+                                                            }
+                                                        },
+                                                        "type": "object"
+                                                    },
+                                                    "type": "array"
+                                                }
+                                            },
+                                            "required": [
+                                                "id",
+                                                "is_order",
+                                                "is_sku",
+                                                "code",
+                                                "create_date",
+                                                "change_date"
+                                            ],
+                                            "type": "object"
+                                        },
+                                        "quantity": {
+                                            "maximum": 9007199254740992,
+                                            "minimum": -9007199254740992,
+                                            "type": "integer"
+                                        },
+                                        "status": {
+                                            "enum": [
+                                                "accepted",
+                                                "cancelled"
+                                            ]
+                                        }
+                                    },
+                                    "required": [
+                                        "id",
+                                        "create_date",
+                                        "change_date",
+                                        "order_item_number",
+                                        "quantity",
+                                        "status",
+                                        "price",
+                                        "discount_price",
+                                        "product"
+                                    ],
+                                    "type": "object"
+                                },
+                                "type": "array"
+                            },
+                            "status": {
+                                "default": "accepted",
+                                "enum": [
+                                    "accepted"
+                                ],
+                                "type": "string"
+                            },
+                            "subtotal": {
+                                "type": "number"
+                            },
+                            "total": {
+                                "type": "number"
+                            },
+                            "total_discounts": {
+                                "type": "number"
+                            },
+                            "total_payment_cost": {
+                                "type": "number"
+                            },
+                            "total_shipping": {
+                                "type": "number"
+                            },
+                            "total_tax": {
+                                "type": "number"
+                            }
+                        },
+                        "required": [
+                            "order_number",
+                            "customer",
+                            "order_date",
+                            "create_date",
+                            "change_date",
+                            "status",
+                            "subtotal",
+                            "total",
+                            "total_tax",
+                            "total_shipping",
+                            "total_payment_cost",
+                            "total_discounts",
+                            "currency",
+                            "items"
+                        ],
+                        "type": "object"
+                    },
+                    "type": "array"
+                },
+                "product": {
+                    "items": {
+                        "properties": {
+                            "ancestors": {
+                                "items": {
+                                    "type": "string"
+                                },
+                                "type": "array"
+                            },
+                            "attributes": {
+                                "items": {
+                                    "properties": {
+                                        "id": {
+                                            "type": "string"
+                                        },
+                                        "name": {
+                                            "type": "string"
+                                        },
+                                        "value": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "required": [
+                                        "id",
+                                        "name",
+                                        "value"
+                                    ],
+                                    "type": "object"
+                                },
+                                "type": "array",
+                                "uniqueItems": true
+                            },
+                            "base_product": {
+                                "properties": {
+                                    "code": {
+                                        "type": "string"
+                                    },
+                                    "id": {
+                                        "type": "string"
+                                    },
+                                    "name": {
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object"
+                            },
+                            "brand": {
+                                "type": "string"
+                            },
+                            "catalog": {
+                                "properties": {
+                                    "id": {
+                                        "type": "string"
+                                    },
+                                    "name": {
+                                        "type": "string"
+                                    },
+                                    "version_id": {
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "id"
+                                ],
+                                "type": "object"
+                            },
+                            "categories": {
+                                "items": {
+                                    "properties": {
+                                        "id": {
+                                            "type": "string"
+                                        },
+                                        "name": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "required": [
+                                        "id",
+                                        "name"
+                                    ],
+                                    "type": "object"
+                                },
+                                "type": "array",
+                                "uniqueItems": true
+                            },
+                            "change_date": {
+                                "format": "date-time",
+                                "type": "string"
+                            },
+                            "code": {
+                                "type": "string"
+                            },
+                            "create_date": {
+                                "format": "date-time",
+                                "type": "string"
+                            },
+                            "id": {
+                                "type": "string"
+                            },
+                            "images": {
+                                "items": {},
+                                "type": "array"
+                            },
+                            "is_order": {
+                                "type": "boolean"
+                            },
+                            "is_sku": {
+                                "type": "boolean"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "rating": {
+                                "type": "number"
+                            },
+                            "urls": {
+                                "properties": {
+                                    "admin": {
+                                        "format": "uri",
+                                        "type": "string"
+                                    },
+                                    "store": {
+                                        "format": "uri",
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object"
+                            },
+                            "vendors": {
+                                "items": {
+                                    "properties": {
+                                        "id": {
+                                            "type": "string"
+                                        },
+                                        "name": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                },
+                                "type": "array"
+                            }
+                        },
+                        "required": [
+                            "id",
+                            "is_order",
+                            "is_sku",
+                            "code",
+                            "create_date",
+                            "change_date"
+                        ],
+                        "type": "object"
+                    },
+                    "type": "array"
+                }
+            },
+            "type": "object"
+        }
+    }
+}

@@ -1,0 +1,161 @@
+{
+    "type": "object",
+    "properties": {
+        "siteId": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "ancestors": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "attributes": {
+                    "items": {
+                        "properties": {
+                            "id": {
+                                "type": "string"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "value": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "id",
+                            "name",
+                            "value"
+                        ],
+                        "type": "object"
+                    },
+                    "type": "array",
+                    "uniqueItems": true
+                },
+                "base_product": {
+                    "properties": {
+                        "code": {
+                            "type": "string"
+                        },
+                        "id": {
+                            "type": "string"
+                        },
+                        "name": {
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                },
+                "brand": {
+                    "type": "string"
+                },
+                "catalog": {
+                    "properties": {
+                        "id": {
+                            "type": "string"
+                        },
+                        "name": {
+                            "type": "string"
+                        },
+                        "version_id": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "id"
+                    ],
+                    "type": "object"
+                },
+                "categories": {
+                    "items": {
+                        "properties": {
+                            "id": {
+                                "type": "string"
+                            },
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "id",
+                            "name"
+                        ],
+                        "type": "object"
+                    },
+                    "type": "array",
+                    "uniqueItems": true
+                },
+                "change_date": {
+                    "format": "date-time",
+                    "type": "string"
+                },
+                "code": {
+                    "type": "string"
+                },
+                "create_date": {
+                    "format": "date-time",
+                    "type": "string"
+                },
+                "id": {
+                    "type": "string"
+                },
+                "images": {
+                    "items": {},
+                    "type": "array"
+                },
+                "is_order": {
+                    "type": "boolean"
+                },
+                "is_sku": {
+                    "type": "boolean"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "rating": {
+                    "type": "number"
+                },
+                "urls": {
+                    "properties": {
+                        "admin": {
+                            "format": "uri",
+                            "type": "string"
+                        },
+                        "store": {
+                            "format": "uri",
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                },
+                "vendors": {
+                    "items": {
+                        "properties": {
+                            "id": {
+                                "type": "string"
+                            },
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "type": "array"
+                }
+            },
+            "required": [
+                "id",
+                "is_order",
+                "is_sku",
+                "code",
+                "create_date",
+                "change_date"
+            ],
+            "type": "object"
+        }
+    }
+}

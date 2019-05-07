@@ -1,0 +1,64 @@
+{
+    "type": "object",
+    "properties": {
+        "siteId": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "active_flag": {
+                    "default": true,
+                    "type": "boolean"
+                },
+                "change_date": {
+                    "format": "date-time",
+                    "type": "string"
+                },
+                "company": {
+                    "type": "string"
+                },
+                "cookies": {
+                    "type": "object"
+                },
+                "create_date": {
+                    "format": "date-time",
+                    "type": "string"
+                },
+                "department": {
+                    "type": "string"
+                },
+                "email": {
+                    "type": "string"
+                },
+                "first_name": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "string"
+                },
+                "last_name": {
+                    "type": "string"
+                },
+                "marketing_opt_in": {
+                    "type": "boolean"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "phone": {
+                    "type": "string"
+                },
+                "position": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id",
+                "create_date",
+                "change_date"
+            ],
+            "type": "object"
+        }
+    }
+}

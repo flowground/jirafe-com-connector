@@ -1,0 +1,33 @@
+{
+    "type": "object",
+    "properties": {
+        "siteId": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "cancel_date": {
+                    "format": "date-time",
+                    "type": "string"
+                },
+                "order_number": {
+                    "type": "string"
+                },
+                "status": {
+                    "default": "cancelled",
+                    "enum": [
+                        "cancelled"
+                    ],
+                    "type": "string"
+                }
+            },
+            "required": [
+                "order_number",
+                "cancel_date",
+                "status"
+            ],
+            "type": "object"
+        }
+    }
+}
